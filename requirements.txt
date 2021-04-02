@@ -1,0 +1,5 @@
+grpcio==1.36.1
+grpcio-tools==1.36.1
+iroha==0.0.5.5
+protobuf==3.15.6
+six==1.15.0
