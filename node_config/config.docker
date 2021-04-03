@@ -3,7 +3,7 @@
   "torii_port" : 50051,
   "internal_port" : 10001,
   "database" : {
-    "host" : "blockchain-postgres",
+    "host" : "database",
     "port" : 5432,
     "user" : "postgres",
     "password" : "QPtc2AssTNv2ugnD",

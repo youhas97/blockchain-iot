@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+    database:
+        image: postgres:9.5
+        command: "postgres -c 'max_prepared_transactions=100'"
+        ports:
+            - 5432:5432
+        volumes:
+            - pgdata:/var/lib/postgresql/data
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: QPtc2AssTNv2ugnD
+
+    iroha:
+        image: hyperledger/iroha:latest
+        command: ["/wait-for-it.sh", "database:5432", "--", "/entrypoint.sh", "irohad"]
+        ports:
+            - 50051:50051
+        volumes:
+            - ./node_config:/opt/iroha_data
+            - blockstore:/tmp/blockstore
+        environment:
+            KEY: genesisNode
+        depends_on:
+            - "database"
+
+volumes:
+    pgdata:
+    blockstore:
