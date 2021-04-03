@@ -18,7 +18,34 @@
                           "createRole":{
                              "roleName":"admin",
                              "permissions":[
-                                "root"
+                                "can_set_detail",
+				"can_create_asset",
+				"can_receive",
+				"can_transfer",
+				"can_add_asset_qty",
+				"can_subtract_asset_qty",
+				"can_add_domain_asset_qty",
+				"can_subtract_domain_asset_qty",
+				"can_create_domain",
+				"can_add_peer",
+				"can_remove_peer",
+				"can_append_role",
+				"can_create_role",
+				"can_detach_role",
+				"can_add_signatory",
+				"can_remove_signatory",
+				"can_set_quorum",
+				"can_get_all_acc_detail",
+				"can_get_all_accounts",
+				"can_get_all_acc_ast",
+				"can_get_all_acc_ast_txs",
+				"can_get_all_acc_txs",
+				"can_read_assets",
+				"can_get_blocks",
+				"can_get_roles",
+				"can_get_all_signatories",
+				"can_get_all_txs",
+				"can_get_peers"
                              ]
                           }
                        },
