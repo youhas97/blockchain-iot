@@ -18,22 +18,7 @@
                           "createRole":{
                              "roleName":"admin",
                              "permissions":[
-                                "can_add_peer",
-                                "can_add_signatory",
-                                "can_create_account",
-                                "can_create_domain",
-                                "can_get_all_acc_ast",
-                                "can_get_all_acc_ast_txs",
-                                "can_get_all_acc_detail",
-                                "can_get_all_acc_txs",
-                                "can_get_all_accounts",
-                                "can_get_all_signatories",
-                                "can_get_all_txs",
-                                "can_get_blocks",
-                                "can_get_roles",
-                                "can_read_assets",
-                                "can_remove_signatory",
-                                "can_set_quorum"
+                                "root"
                              ]
                           }
                        },
