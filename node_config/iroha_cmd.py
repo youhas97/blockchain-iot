@@ -17,10 +17,10 @@ ACCOUNT_ID = sys.argv[1]
 ACCOUNT_PRIVATE_KEY = ''
 ACCOUNT_PUBLIC_KEY = ''
 
-with open("{acc}.priv".format(acc=ACCOUNT_ID), 'r') as f:
+with open("{}.priv".format(ACCOUNT_ID), 'r') as f:
     ACCOUNT_PRIVATE_KEY = f.read()
 
-with open("{acc}.pub".format(acc=ACCOUNT_ID), 'r') as f:
+with open("{}.pub".format(ACCOUNT_ID), 'r') as f:
     ACCOUNT_PUBLIC_KEY = f.read()
 
 iroha = Iroha(ACCOUNT_ID)
@@ -62,3 +62,22 @@ def get_account_assets(account_id):
     for asset in data:
         print('Asset id = {}, balance = {}'.format(
             asset.asset_id, asset.balance))
+
+
+@trace
+def create_account(name, domain):
+    with open("{}.pub".format(name + '@' + domain), 'r') as f:
+        key = f.read()
+    transaction = iroha.transaction([
+        iroha.command(
+            'CreateAccount',
+            account_name = name,
+            domain_id = domain,
+            public_key = key
+        )
+    ])
+    IrohaCrypto.sign_transaction(transaction, ACCOUNT_PRIVATE_KEY)
+    net.send_tx(transaction)
+
+    for status in net.tx_status_stream(transaction):
+        print(status)
