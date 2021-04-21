@@ -1,30 +1,61 @@
 version: "3.8"
 
 services:
-    database:
-        image: postgres:9.5
-        command: "postgres -c 'max_prepared_transactions=100'"
-        ports:
-            - 5432:5432
-        volumes:
-            - pgdata:/var/lib/postgresql/data
-        environment:
-            POSTGRES_USER: postgres
-            POSTGRES_PASSWORD: QPtc2AssTNv2ugnD
+  database:
+    image: postgres:9.5
+    command: "postgres -c 'max_prepared_transactions=100'"
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: QPtc2AssTNv2ugnD
+    networks:
+      iroha-network:
+        ipv4_address: 10.1.1.1
 
-    iroha:
-        image: hyperledger/iroha:latest
-        command: ["/wait-for-it.sh", "database:5432", "--", "/entrypoint.sh", "irohad"]
-        ports:
-            - 50051:50051
-        volumes:
-            - ./node_config:/opt/iroha_data
-            - blockstore:/tmp/blockstore
-        environment:
-            KEY: genesisNode
-        depends_on:
-            - "database"
+  # iroha:
+  #   image: hyperledger/iroha:latest
+  #   command: ["/wait-for-it.sh", "database:5432", "--", "/entrypoint.sh", "irohad"]
+  #   ports:
+  #     - "50051:50051"
+  #     - "10001:10001"
+  #   volumes:
+  #     - ./node_config:/opt/iroha_data
+  #     - blockstore:/tmp/blockstore
+  #   environment:
+  #     KEY: genesisNode
+  #   depends_on:
+  #     - "database"
+  #   networks:
+  #     iroha-network:
+  #       ipv4_address: 10.1.1.2
+
+  # iroha1:
+  #   image: hyperledger/iroha:latest
+  #   command: ["/wait-for-it.sh", "database:5432", "--", "/entrypoint.sh", "irohad"]
+  #   ports:
+  #     - "50052:50051"
+  #     - "10002:10002"
+  #   volumes:
+  #     - ./node_config1:/opt/iroha_data
+  #     - blockstore1:/tmp/blockstore
+  #   environment:
+  #     KEY: node_0
+  #   depends_on:
+  #     - "database"
+  #   networks:
+  #     iroha-network:
+  #       ipv4_address: 10.1.1.3
 
 volumes:
-    pgdata:
-    blockstore:
+  pgdata:
+
+networks:
+  iroha-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.1.0.0/16
+          gateway: 10.1.0.1
