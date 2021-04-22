@@ -7,7 +7,6 @@ for (( i = 1; i <= $(docker ps -a | grep iroha_ | wc -l); ++i)); do
 done
 
 for cont in "${containers[@]}"; do
-  echo $cont
   docker container stop $cont
   docker container rm $cont
 done
@@ -21,4 +20,6 @@ done
 for vol in "${volumes[@]}"; do
   docker volume rm $vol
 done
+
+docker-compose down -v
 

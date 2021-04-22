@@ -10,6 +10,8 @@ if ! [[ $1 =~ ^[1-9][0-9]*$ ]]; then
   exit 1
 fi
 
+docker-compose up -d
+
 python autogen_nodes.py $1
 
 for (( i = 0; i < $1; ++i ))
@@ -31,5 +33,37 @@ do
   -e IROHA_POSTGRES_HOST="database" \
   hyperledger/iroha:latest
 done 
+
+sleepTime=20
+
+echo "Sleeping for ${sleepTime} seconds."
+sleep $sleepTime
+
+while : ; do  
+
+  exited_containers=()
+  for (( i = 1; i <= $(docker ps -a | grep iroha_ | wc -l); ++i)); do
+    line=$(docker ps -a | grep iroha_ | cut -d$'\n' -f $i)
+    container=$(echo $line | awk '{print $1}')
+    status=$(echo $line | awk '{print $8}')
+    if [ "${status}" = "Exited" ]; then
+      exited_containers+=($container)
+    fi
+  done
+
+  if (( ${#exited_containers[@]} > 0 )); then
+    echo "Restarting exited containers."
+    for cont in "${exited_containers[@]}"; do
+      docker start $cont
+    done
+  else
+    break
+  fi
+
+  echo "Sleeping for ${sleepTime} seconds."
+  sleep $sleepTime
+done
+
+echo "All containers successfully started."
 
 exit 0
