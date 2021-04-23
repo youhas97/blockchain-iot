@@ -15,7 +15,9 @@ for (( i = 1; i <= $(docker ps -a | grep nodedb_ | wc -l); ++i)); do
 done
 
 for cont in "${containers[@]}"; do
-  docker container stop $cont
+  if [ "$( docker container inspect -f '{{.State.Status}}' $cont )" == "running" ]; then
+    docker container kill $cont
+  fi
   docker container rm $cont
 done
 
