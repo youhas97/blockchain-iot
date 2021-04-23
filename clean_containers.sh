@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set -e
+
+command -v docker-compose >/dev/null 2>&1 || { echo "I require docker-compose but it's not installed. Remember to source your venv. Aborting." >&2; exit 1; }
+
 containers=()
 for (( i = 1; i <= $(docker ps -a | grep iroha_ | wc -l); ++i)); do
   container=$(docker ps -a | grep iroha_ | cut -d$'\n' -f $i | cut -d' ' -f 1)

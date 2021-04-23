@@ -1,5 +1,10 @@
 #!/bin/bash
 
+set -e
+
+command -v python >/dev/null 2>&1 || { echo "I require python but it's not installed.  Remember to source your venv. Aborting." >&2; exit 1; }
+command -v docker-compose >/dev/null 2>&1 || { echo "I require docker-compose but it's not installed. Remember to source your venv. Aborting." >&2; exit 1; }
+
 if [ $# -ne 1 ]; then
   echo The scripts accepts exactly one integer argument.
   exit 1
@@ -12,7 +17,14 @@ fi
 
 docker-compose up -d
 
-python autogen_nodes.py $1
+{
+  python autogen_nodes.py $1
+} ||
+{
+  echo "Something went wrong when trying to generate node files. Make sure to source your venv before running the script."
+  docker-compose down -v
+  exit 1
+}
 
 for (( i = 0; i < $1; ++i ))
 do
