@@ -3,7 +3,7 @@
 set -e
 
 command -v python >/dev/null 2>&1 || { echo "I require python but it's not installed.  Remember to source your venv. Aborting." >&2; exit 1; }
-command -v docker-compose >/dev/null 2>&1 || { echo "I require docker-compose but it's not installed. Remember to source your venv. Aborting." >&2; exit 1; }
+#command -v docker-compose >/dev/null 2>&1 || { echo "I require docker-compose but it's not installed. Remember to source your venv. Aborting." >&2; exit 1; }
 
 if [ $# -ne 1 ]; then
   echo The scripts accepts exactly one integer argument.
@@ -15,16 +15,18 @@ if ! [[ $1 =~ ^[1-9][0-9]*$ ]]; then
   exit 1
 fi
 
-docker-compose up -d
+#docker-compose up -d
 
 {
   python autogen_nodes.py $1
 } ||
 {
   echo "Something went wrong when trying to generate node files. Make sure to source your venv before running the script."
-  docker-compose down -v
+  #docker-compose down -v
   exit 1
 }
+
+docker network create iroha-network --subnet 10.1.0.0/16 --gateway 10.1.0.1
 
 for (( i = 0; i < $1; ++i ))
 do
@@ -32,6 +34,23 @@ do
   then
     docker volume rm blockstore_$((i))
   fi
+  if (( $(docker volume ls | grep pgdata_$((i)) | wc -l) > 0))
+  then
+    docker volume rm pgdata_$((i))
+  fi
+
+  docker volume create pgdata_$((i))
+  docker run --name nodedb_$i \
+  --expose 5432 \
+  -v pgdata_$((i)):/var/lib/postgresql/data \
+  --network=iroha-network \
+  --ip=10.1.1.$i \
+  -e POSTGRES_USER="postgres" \
+  -e POSTGRES_PASSWORD="QPtc2AssTNv2ugnD" \
+  -d postgres:9.5 \
+  -c 'max_prepared_transactions=100'
+
+
   docker volume create blockstore_$((i))
   docker run --name iroha_$i \
   -d \
@@ -39,10 +58,10 @@ do
   -p $((10001 + $i)):10001 \
   -v $(pwd)/nodes/node_$((i)):/opt/iroha_data \
   -v blockstore_$((i)):/tmp/block_store \
-  --network=blockchain-iot_iroha-network \
+  --network=iroha-network \
   --ip=10.1.2.$i \
   -e KEY="node_${i}" \
-  -e IROHA_POSTGRES_HOST="database" \
+  -e IROHA_POSTGRES_HOST="nodedb_${i}" \
   hyperledger/iroha:latest
 done 
 
