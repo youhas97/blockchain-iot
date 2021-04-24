@@ -16,7 +16,7 @@ elif [ "${LOCUST_MODE}" = "slave" ]; then
         exit 1
     fi
 
-    LOCUST_OPTS="${LOCUST_OPTS} --slave --master-host=${LOCUST_MASTER_HOST} --master-port=${LOCUST_MASTER_PORT:-5557}"
+    LOCUST_OPTS="${LOCUST_OPTS} --worker --master-host=${LOCUST_MASTER_HOST} --master-port=${LOCUST_MASTER_PORT:-5557}"
 fi
 
 echo "Starting Locust..."

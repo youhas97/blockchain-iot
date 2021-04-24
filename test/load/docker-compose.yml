@@ -1,4 +1,4 @@
-version: "3.4"
+version: "3.9"
 
 x-common: &common
   image: iroha-locust
@@ -15,11 +15,23 @@ services:
     ports:
       - '8089:8089'
     environment:
-      LOCUST_MODE: master
+      LOCUST_MODE: master    
+    networks:
+      - iroha-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
   locust-slave:
     <<: *common
     environment:
       LOCUST_MODE: slave
       LOCUST_MASTER_HOST: locust-master
+    networks:
+      - iroha-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+networks:
+  iroha-network:
+    external: true
 
 

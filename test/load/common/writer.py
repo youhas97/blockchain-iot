@@ -65,6 +65,6 @@ class InfluxDBWriter(object):
 
 
 writer = InfluxDBWriter()
-events.request_success += writer.request_success
-events.request_failure += writer.request_failure
-events.hatch_complete += writer.hatch_complete
+events.request_success.add_listener(writer.request_success)
+events.request_failure.add_listener(writer.request_failure)
+events.spawning_complete.add_listener(writer.hatch_complete)
