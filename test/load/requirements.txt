@@ -1,0 +1,7 @@
+iroha
+influxdb
+
+locust==1.4.4
+pyzmq>=18.0.1
+grpcio==1.19.0 
+grpcio-tools==1.19.0

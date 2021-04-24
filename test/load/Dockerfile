@@ -1,10 +1,15 @@
-FROM python:3.6.6-alpine3.8
+FROM ubuntu:bionic-20190204
 
-RUN apk --no-cache add g++ zeromq-dev \
-      && pip install locustio pyzmq
+RUN apt-get update && apt-get install -y python3.6 curl ash
+
+RUN apt-get update && apt-get install -y python3-distutils
+
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-pip.py
+
+COPY requirements.txt /
+
+RUN python3 -m pip install -r requirements.txt
 
 EXPOSE 8089 5557 5558
 
-ENTRYPOINT ["/usr/local/bin/locust"]
-
-RUN pip install grpcio==1.19.0 grpcio-tools==1.19.0 iroha influxdb
+ENTRYPOINT ["usr/local/bin/bash"]

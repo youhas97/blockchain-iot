@@ -2,7 +2,7 @@ import os
 import time
 import binascii
 
-from locust import Locust, TaskSet, events, task, User, constant
+from locust import Locust, TaskSet, events, task, User, constant_pacing
 
 import grpc.experimental.gevent as grpc_gevent
 grpc_gevent.init_gevent()
@@ -99,11 +99,11 @@ class ApiUser(IrohaLocust):
     host = "10.1.2.0:50051"
     #min_wait = 1000
     #max_wait = 1000
-    wait_time = constant(1)
 
     @task
     class task_set(TaskSet):
         gps_coord = 0
+        wait_time = constant_pacing(1)
 
         @task
         def send_tx(self):

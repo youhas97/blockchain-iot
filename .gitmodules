@@ -1,3 +1,0 @@
-[submodule "test/load/iroha-locust"]
-	path = test/load/iroha-locust
-	url = git@github.com:soupracer/iroha-locust.git
