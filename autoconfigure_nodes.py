@@ -16,7 +16,7 @@ config_docker = {
   "max_rounds_delay": 3000,
   "stale_stream_max_rounds": 2,
   "database": {
-    "host" : "database",
+    "host" : "",
     "port" : 5432,
     "user" : "postgres",
     "password" : "QPtc2AssTNv2ugnD",
@@ -132,6 +132,7 @@ genesis_block = {
   }
 }
 
+NODES_PER_DB=10
 
 if __name__ == '__main__':
     if len(sys.argv) != 2 or not (sys.argv[1].isdigit() and int(sys.argv[1]) >= 0):
@@ -139,6 +140,7 @@ if __name__ == '__main__':
 
     nodes = int(sys.argv[1])
 
+    db_counter = 0
     for i in range(nodes):
       private_key = IrohaCrypto.private_key()
       public_key = IrohaCrypto.derive_public_key(private_key)
@@ -163,7 +165,11 @@ if __name__ == '__main__':
         }
       })
       
-      config_docker["database"]["working database"] = "node_data_{}".format(i)
+
+      if i > 0 and i % NODES_PER_DB == 0:
+        db_counter+=1
+      config_docker["database"]["host"] = "nodedb_{}".format(db_counter)
+      config_docker["database"]["working database"] = "node_data_{}".format(i % NODES_PER_DB)
 
       with open("nodes/node_{}/config.docker".format(i), 'w') as f:
         json.dump(config_docker, f, indent=2)

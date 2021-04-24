@@ -19,7 +19,7 @@ fi
 NODES_PER_DB=10
 
 {
-  python autogen_nodes.py $1
+  python autoconfigure_nodes.py $1
 } ||
 {
   echo "Something went wrong when trying to generate node files. Make sure to source your venv before running the script."
