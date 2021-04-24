@@ -10,7 +10,7 @@ config_docker = {
   "internal_port" : 10001,
   "max_proposal_size" : 10,
   "proposal_delay" : 5000,
-  "vote_delay" : 5000,
+  "vote_delay" : 100,
   "mst_enable" : False,
   "mst_expiration_time" : 1440,
   "max_rounds_delay": 3000,
