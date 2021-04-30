@@ -2,6 +2,8 @@ from datetime import datetime
 from influxdb import InfluxDBClient
 from locust import events
 
+import os
+import json
 
 class InfluxDBWriter(object):
     """
@@ -11,6 +13,13 @@ class InfluxDBWriter(object):
     def __init__(self):
         self._client = InfluxDBClient(host='influxdb', database='influxdb', use_udp=True)
         self._user_count = 0
+        self.file1 = "/tests/1_node_success.json"
+        self.file2 = "/tests/1_node_failure.json"
+
+        if os.path.isfile(self.file1):
+            os.remove(self.file1)        
+        if os.path.isfile(self.file2):
+            os.remove(self.file2)
 
     def hatch_complete(self, user_count, **kw):
         self._user_count = user_count
@@ -38,6 +47,9 @@ class InfluxDBWriter(object):
                 "value": self._user_count
             }
         }]
+        #self.file_success.write(json.dumps(points[0], indent=2))
+        with open(self.file1, 'a') as f:
+            f.write(json.dumps(points[0], indent=2) + '\n')
         self._client.write_points(points)
 
     def request_failure(self, request_type, name, response_time, exception, tx_hash=None, **kw):
@@ -61,6 +73,7 @@ class InfluxDBWriter(object):
                 "value": self._user_count
             }
         }]
+        self.file_failure.write(json.dumps(points[0], indent=2))
         self._client.write_points(points)
 
 

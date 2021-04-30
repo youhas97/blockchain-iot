@@ -25,6 +25,8 @@ services:
       LOCUST_MASTER_HOST: locust-master
     networks:
       - iroha-network
+    volumes:
+      - './:/tests'
 
 networks:
   iroha-network:

@@ -26,7 +26,6 @@ COMMITTED = set()
 SENT = set()
 BLOCKS = set()
 
-
 def ascii_hash(tx):
     return binascii.hexlify(ic.hash(tx)).decode('ascii')
 
@@ -92,6 +91,8 @@ class IrohaLocust(User):
         super(IrohaLocust, self).__init__(*args, **kwargs)
         self.client = IrohaClient(self.host)
         gevent.spawn(block_listener, self.host)
+        self.gps_coord = (1.5, 1.5)
+        self.requests = 0
 
 
 class ApiUser(IrohaLocust):
@@ -102,7 +103,6 @@ class ApiUser(IrohaLocust):
 
     @task
     class task_set(TaskSet):
-        gps_coord = 0
         wait_time = constant_pacing(1)
 
         @task
@@ -128,9 +128,13 @@ class ApiUser(IrohaLocust):
               'SetAccountDetail',
               account_id="admin@coniks",
               key="gps",
-              value=str(self.gps_coord)
+              value=str(self.user.gps_coord)
             )])
 
             ic.sign_transaction(tx, ADMIN_PRIVATE_KEY)
             self.client.send_tx_wait(tx)
-            self.gps_coord += 1
+            self.user.gps_coord = (self.user.gps_coord[0] + 1, self.user.gps_coord[1] + 1)
+            if self.user.requests == 100:
+                self.user.environment.reached_end = True
+                self.user.environment.runner.quit()
+            self.user.requests += 1
