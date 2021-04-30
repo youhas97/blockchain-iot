@@ -18,8 +18,6 @@ services:
       LOCUST_MODE: master    
     networks:
       - iroha-network
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
   locust-slave:
     <<: *common
     environment:
@@ -27,11 +25,8 @@ services:
       LOCUST_MASTER_HOST: locust-master
     networks:
       - iroha-network
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
 
 networks:
   iroha-network:
-    external: true
 
 

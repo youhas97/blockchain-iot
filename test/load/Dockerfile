@@ -1,10 +1,8 @@
 FROM ubuntu:bionic-20190204
 
-RUN apt-get update && apt-get install -y python3.6 curl ash
+RUN apt update && apt install -y python3 ash python-all-dev libevent-dev
 
-RUN apt-get update && apt-get install -y python3-distutils
-
-RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-pip.py
+RUN apt update && apt install -y python3-pip python3-distutils python3-greenlet
 
 COPY requirements.txt /
 

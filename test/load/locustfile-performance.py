@@ -96,7 +96,7 @@ class IrohaLocust(User):
 
 class ApiUser(IrohaLocust):
 
-    host = "10.1.2.0:50051"
+    host = "13.51.159.169:50051"
     #min_wait = 1000
     #max_wait = 1000
 

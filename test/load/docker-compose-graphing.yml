@@ -2,7 +2,7 @@ version: "3.4"
 
 services:
   influxdb:
-    image: influxdb
+    image: arm32v7/influxdb:latest
     environment:
       INFLUXDB_DB: "influxdb"
       INFLUXDB_UDP_ENABLED: "true"
@@ -29,4 +29,3 @@ volumes:
 
 networks:
   iroha-network:
-    external: true
