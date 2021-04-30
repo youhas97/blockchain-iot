@@ -89,7 +89,8 @@ genesis_block = {
                       "can_receive",
                       "can_remove_signatory",
                       "can_set_quorum",
-                      "can_transfer"
+                      "can_transfer",
+                      "can_set_my_account_detail"
                     ]
                   }
                 },
@@ -125,14 +126,14 @@ genesis_block = {
                     "domainId":"coniks",
                     "publicKey":"94e15264063c5b2a3db480bc686cb8822a752be59e6f2f006bb057be91fdcd1f"
                   }
-                },,
+                },
                 {
                   "createAccount":{
                     "accountName":"drone2",
                     "domainId":"coniks",
                     "publicKey":"56b522f1d91bd7284ee05cd41d25ad26ac574d9ab091649380371be47632bfb6"
                   }
-                },
+                }
               ],
               "quorum":1
             }
