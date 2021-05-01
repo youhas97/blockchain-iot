@@ -1,5 +1,6 @@
 import os
 import json
+from functools import reduce
 
 import plotly.graph_objects as go
 
@@ -22,7 +23,24 @@ def load_json_to_python(filename):
         data.append(json.loads(obj_string))
         obj_string = ""
 
-  return data
+  data.sort(key=lambda x: x["fields"]["sent"])
+  return [time["fields"]["value"] for time in data]
+
+def add_line_trace(figure, data, name, color):
+  figure.add_trace(go.Scatter(
+    x=[*range(1, len(data) + 1)], 
+    y=data, 
+    name=name,
+    mode="lines+markers",
+    line=dict(width=1, color=color)
+  ))
+
+def add_box_trace(figure, data, name):
+  figure.add_trace(go.Box(
+    y=data,
+    name=name,
+    line_width=1
+    ))
 
 
 if __name__ == '__main__':
@@ -30,18 +48,22 @@ if __name__ == '__main__':
   os.chdir(os.path.abspath(os.path.join(file_path, "data")))
 
   drones_1_nodes_1_data = load_json_to_python("1_node_success_drone1.json")
-  drones_1_nodes_1_data.sort(key=lambda p: p["fields"]["sent"])
-  response_time = [time["fields"]["value"] for time in drones_1_nodes_1_data]
   
-  fig = go.Figure()
+  line_fig = go.Figure()
+  box_fig = go.Figure()
 
-  fig.add_trace(go.Scatter(x=[*range(1, len(response_time) + 1)], \
-    y=response_time, 
-    name="1_drone_1_node", 
-    line=dict(color="royalblue", width=4)))
+  add_line_trace(line_fig, drones_1_nodes_1_data, "1_drone_1_node", "orange")
+  add_box_trace(box_fig, drones_1_nodes_1_data, "1_drone_1_node")
 
-  fig.update_layout(title="Time until blocks are commited", \
-    xaxis_title="Transaction",
-    yaxis_title="Time (ms)")
+  line_fig.update_layout(
+    title="Iroha block commit time", 
+    xaxis_title="Number of request",
+    yaxis_title="Time (ms)"
+  )
 
-  fig.show()
+  box_fig.update_layout(
+    title="Iroha block commit time box plots"
+  )
+
+  line_fig.show()
+  box_fig.show()
