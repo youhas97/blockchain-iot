@@ -16,10 +16,18 @@ import common.writer
 import random
 import gevent
 
+import sys
+
 
 HOSTNAME = os.environ['HOSTNAME']
 #ADMIN_PRIVATE_KEY = 'f101537e319568c765b2cc89698325604991dca57b9716b58016b253506cab70'
-ADMIN_PRIVATE_KEY = "4503398c756e1bf99051836f43a6bbc45d24c2ad95f3a3bdc401993dcdabda05"
+ADMIN_PRIVATE_KEY  = "4503398c756e1bf99051836f43a6bbc45d24c2ad95f3a3bdc401993dcdabda05"
+DRONE1_PRIVATE_KEY = "21dbe38683493a881de50f92109d26961cb1a8505a9d6a0ae604f970f5ba5a10"
+DRONE2_PRIVATE_KEY = "1fd0bf2dc2278741271c79adfbe8ee2fbacc758a4cfed3b7e7fe3601cabd0a05"
+
+IROHA_HOSTS = int(os.environ.get("IROHA_HOSTS", 1))
+if(IROHA_HOSTS < 1):
+  sys.exit("IROHA_HOSTS needs to be at least 1")
 
 TXS = dict() # hash -> sent time
 COMMITTED = set()
@@ -77,7 +85,7 @@ def block_listener(host):
             del TXS[hash]
             total_time = int((time.time() - start_time) * 1000)
             try:
-                events.request_success.fire(request_type="grpc", name='send_tx_wait', response_time=total_time, response_length=0, tx_hash=hash, sent=start_time, committed=time.time())
+                events.request_success.fire(request_type="grpc", name='send_tx_wait', response_time=total_time, response_length=0, tx_hash=hash, sent=start_time, committed=time.time(), block=block.block_response.block)
             except Exception as e:
                 print(e)
 
@@ -89,15 +97,17 @@ class IrohaLocust(User):
     abstract=True
     def __init__(self, *args, **kwargs):
         super(IrohaLocust, self).__init__(*args, **kwargs)
+        host_nr = random.randint(1, IROHA_HOSTS)
+        self.host = "13.51.159.169:{}".format(50050 + host_nr)
         self.client = IrohaClient(self.host)
         gevent.spawn(block_listener, self.host)
-        self.gps_coord = (1.5, 1.5)
+        self.gps_coord = (1.54321, 1.54321)
         self.requests = 0
 
 
 class ApiUser(IrohaLocust):
 
-    host = "13.51.159.169:50051"
+    #host = "10.1.2.0:{}".format(random.randint(50051, (50050+IROHA_HOSTS)))
     #min_wait = 1000
     #max_wait = 1000
 
@@ -116,7 +126,7 @@ class ApiUser(IrohaLocust):
                 Blocks: {}\n
                 """.format(len(SENT), len(COMMITTED), len(SENT) - len(COMMITTED), len(BLOCKS)))
             #iroha = Iroha('admin@test')
-            iroha = Iroha("admin@coniks")
+            iroha = Iroha("drone1@coniks")
 
             #desc = str(random.random())
             # tx = iroha.transaction([iroha.command(
@@ -126,14 +136,14 @@ class ApiUser(IrohaLocust):
 
             tx = iroha.transaction([iroha.command(
               'SetAccountDetail',
-              account_id="admin@coniks",
+              account_id="drone1@coniks",
               key="gps",
               value=str(self.user.gps_coord)
             )])
 
-            ic.sign_transaction(tx, ADMIN_PRIVATE_KEY)
+            ic.sign_transaction(tx, DRONE1_PRIVATE_KEY)
             self.client.send_tx_wait(tx)
-            self.user.gps_coord = (self.user.gps_coord[0] + 1, self.user.gps_coord[1] + 1)
+            self.user.gps_coord = (round(self.user.gps_coord[0] + 1, 5), round(self.user.gps_coord[1] + 1, 5))
             if self.user.requests == 100:
                 self.user.environment.reached_end = True
                 self.user.environment.runner.quit()

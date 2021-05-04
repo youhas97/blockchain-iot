@@ -47,10 +47,11 @@ class InfluxDBWriter(object):
                 "value": self._user_count
             }
         }]
-        #self.file_success.write(json.dumps(points[0], indent=2))
+        self._client.write_points(points)
+        points[0]["block_size"] = len(str(kw["block"].block_v1.payload).encode("utf-8"))
+        points[0]["total_block_size"] = len(str(kw["block"]).encode("utf-8"))
         with open(self.file1, 'a') as f:
             f.write(json.dumps(points[0], indent=2) + '\n')
-        self._client.write_points(points)
 
     def request_failure(self, request_type, name, response_time, exception, tx_hash=None, **kw):
         now = datetime.now().isoformat()
@@ -73,8 +74,9 @@ class InfluxDBWriter(object):
                 "value": self._user_count
             }
         }]
-        self.file_failure.write(json.dumps(points[0], indent=2))
         self._client.write_points(points)
+        with open(self.file2, 'a') as f:
+            f.write(json.dumps(points[0], indent=2) + '\n')
 
 
 writer = InfluxDBWriter()

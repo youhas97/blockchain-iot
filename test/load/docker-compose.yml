@@ -23,6 +23,7 @@ services:
     environment:
       LOCUST_MODE: slave
       LOCUST_MASTER_HOST: locust-master
+      IROHA_HOSTS: 4
     networks:
       - iroha-network
     volumes:
@@ -30,5 +31,6 @@ services:
 
 networks:
   iroha-network:
+    external: true
 
 
