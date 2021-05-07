@@ -18,6 +18,8 @@ import gevent
 
 import sys
 
+import json
+
 
 HOSTNAME = os.environ['HOSTNAME']
 #ADMIN_PRIVATE_KEY = 'f101537e319568c765b2cc89698325604991dca57b9716b58016b253506cab70'
@@ -101,7 +103,9 @@ class IrohaLocust(User):
         self.host = "13.51.159.169:{}".format(50050 + host_nr)
         self.client = IrohaClient(self.host)
         gevent.spawn(block_listener, self.host)
-        self.gps_coord = (1.54321, 1.54321)
+        self.gps_coord = (59.0593, 16.5915)
+        self.alt = 100
+        self.speed = 5.55
         self.requests = 0
 
 
@@ -137,13 +141,12 @@ class ApiUser(IrohaLocust):
             tx = iroha.transaction([iroha.command(
               'SetAccountDetail',
               account_id="drone1@coniks",
-              key="gps",
-              value=str(self.user.gps_coord)
+              key="pos_data",
+              value=json.dumps({"gps": self.gps_coord, "speed": self.speed, "alt": self.alt})
             )])
 
             ic.sign_transaction(tx, DRONE1_PRIVATE_KEY)
             self.client.send_tx_wait(tx)
-            self.user.gps_coord = (round(self.user.gps_coord[0] + 1, 5), round(self.user.gps_coord[1] + 1, 5))
             if self.user.requests == 100:
                 self.user.environment.reached_end = True
                 self.user.environment.runner.quit()
