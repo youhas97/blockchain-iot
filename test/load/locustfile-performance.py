@@ -99,11 +99,13 @@ class IrohaLocust(User):
     abstract=True
     def __init__(self, *args, **kwargs):
         super(IrohaLocust, self).__init__(*args, **kwargs)
-        self.host_nr = random.randint(1, IROHA_HOSTS)
-        self.host = "13.51.159.169:{}".format(50050 + self.host_nr)
+        # self.host_nr = random.randint(1, IROHA_HOSTS)
+        # self.host = "13.51.159.169:{}".format(50050 + self.host_nr)
+        self.host = "13.51.159.169:50051"
         self.client = IrohaClient(self.host)
         gevent.spawn(block_listener, self.host)
-        self.gps_coord = (59.0593, 16.5915)
+        self.lat = 59.0593
+        self.long = 16.5915
         self.alt = 100
         self.speed = 5.55
         self.direction = 33.333
@@ -113,10 +115,6 @@ class IrohaLocust(User):
 
 
 class ApiUser(IrohaLocust):
-
-    #host = "10.1.2.0:{}".format(random.randint(50051, (50050+IROHA_HOSTS)))
-    #min_wait = 1000
-    #max_wait = 1000
 
     @task
     class task_set(TaskSet):
@@ -132,27 +130,23 @@ class ApiUser(IrohaLocust):
                 Diff: {}
                 Blocks: {}\n
                 """.format(len(SENT), len(COMMITTED), len(SENT) - len(COMMITTED), len(BLOCKS)))
-            #iroha = Iroha('admin@test')
             iroha = Iroha("drone1@coniks")
 
-            #desc = str(random.random())
-            # tx = iroha.transaction([iroha.command(
-            #     'TransferAsset', src_account_id='admin@test', dest_account_id='test@test', asset_id='coin#test',
-            #     amount='0.01', description=desc
-            # )])
+            data = "lat: {}, long: {}, speed: {}, altitude: {}, direction: {}, timestamp: {}, status: {}".format(
+                self.user.lat, 
+                self.user.long,
+                self.user.speed, 
+                self.user.alt, 
+                self.user.direction, 
+                self.user.timestamp, 
+                self.user.status
+            )
 
             tx = iroha.transaction([iroha.command(
-              'SetAccountDetail',
-              account_id="drone1@coniks",
-              key="pos_data",
-              value=json.dumps({
-                "gps": self.user.gps_coord, 
-                "speed": self.user.speed, 
-                "alt": self.user.alt,
-                "dir": self.user.direction,
-                "timestamp": self.user.timestamp,
-                "status": self.user.status
-              })
+                'SetAccountDetail',
+                account_id="drone1@coniks",
+                key="location",
+                value=data
             )])
 
             ic.sign_transaction(tx, DRONE1_PRIVATE_KEY)
