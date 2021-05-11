@@ -29,4 +29,3 @@ volumes:
 
 networks:
   iroha-network:
-    external: true

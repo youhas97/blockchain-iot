@@ -13,13 +13,13 @@ class InfluxDBWriter(object):
     def __init__(self):
         self._client = InfluxDBClient(host='influxdb', database='influxdb', use_udp=True)
         self._user_count = 0
-        self.file1 = "/tests/1_node_success.json"
-        self.file2 = "/tests/1_node_failure.json"
+        # self.file1 = "/tests/1_node_success.json"
+        # self.file2 = "/tests/1_node_failure.json"
 
-        if os.path.isfile(self.file1):
-            os.remove(self.file1)        
-        if os.path.isfile(self.file2):
-            os.remove(self.file2)
+        # if os.path.isfile(self.file1):
+        #     os.remove(self.file1)        
+        # if os.path.isfile(self.file2):
+        #     os.remove(self.file2)
 
     def hatch_complete(self, user_count, **kw):
         self._user_count = user_count
@@ -48,10 +48,10 @@ class InfluxDBWriter(object):
             }
         }]
         self._client.write_points(points)
-        points[0]["block_size"] = len(str(kw["block"].block_v1.payload).encode("utf-8"))
-        points[0]["total_block_size"] = len(str(kw["block"]).encode("utf-8"))
-        with open(self.file1, 'a') as f:
-            f.write(json.dumps(points[0], indent=2) + '\n')
+        # points[0]["block_size"] = len(str(kw["block"].block_v1.payload).encode("utf-8"))
+        # points[0]["total_block_size"] = len(str(kw["block"]).encode("utf-8"))
+        # with open(self.file1, 'a') as f:
+        #     f.write(json.dumps(points[0], indent=2) + '\n')
 
     def request_failure(self, request_type, name, response_time, exception, tx_hash=None, **kw):
         now = datetime.now().isoformat()
@@ -74,9 +74,9 @@ class InfluxDBWriter(object):
                 "value": self._user_count
             }
         }]
-        self._client.write_points(points)
-        with open(self.file2, 'a') as f:
-            f.write(json.dumps(points[0], indent=2) + '\n')
+        # self._client.write_points(points)
+        # with open(self.file2, 'a') as f:
+        #     f.write(json.dumps(points[0], indent=2) + '\n')
 
 
 writer = InfluxDBWriter()

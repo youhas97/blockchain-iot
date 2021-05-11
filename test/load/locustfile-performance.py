@@ -99,13 +99,16 @@ class IrohaLocust(User):
     abstract=True
     def __init__(self, *args, **kwargs):
         super(IrohaLocust, self).__init__(*args, **kwargs)
-        host_nr = random.randint(1, IROHA_HOSTS)
-        self.host = "13.51.159.169:{}".format(50050 + host_nr)
+        self.host_nr = random.randint(1, IROHA_HOSTS)
+        self.host = "13.51.159.169:{}".format(50050 + self.host_nr)
         self.client = IrohaClient(self.host)
         gevent.spawn(block_listener, self.host)
         self.gps_coord = (59.0593, 16.5915)
         self.alt = 100
         self.speed = 5.55
+        self.direction = 33.333
+        self.timestamp = time.time()
+        self.status = "airborne"
         self.requests = 0
 
 
@@ -142,7 +145,14 @@ class ApiUser(IrohaLocust):
               'SetAccountDetail',
               account_id="drone1@coniks",
               key="pos_data",
-              value=json.dumps({"gps": self.gps_coord, "speed": self.speed, "alt": self.alt})
+              value=json.dumps({
+                "gps": self.user.gps_coord, 
+                "speed": self.user.speed, 
+                "alt": self.user.alt,
+                "dir": self.user.direction,
+                "timestamp": self.user.timestamp,
+                "status": self.user.status
+              })
             )])
 
             ic.sign_transaction(tx, DRONE1_PRIVATE_KEY)
