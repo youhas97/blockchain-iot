@@ -1,0 +1,1600 @@
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:41.923779",
+  "fields": {
+    "value": 139,
+    "tx_hash": "aebed4c6d5bee409ef85a0a996040ff0ce2c7fbefd25273e509be92a7a7810f9",
+    "sent": 1620737621.784267,
+    "committed": 1620737621.9237385
+  },
+  "block_size": 7809,
+  "total_block_size": 9682
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:43.002231",
+  "fields": {
+    "value": 143,
+    "tx_hash": "83b610908e041817e2181d48cb6efd8384ddb46f238550d580f767cd20a13118",
+    "sent": 1620737622.8590786,
+    "committed": 1620737623.0022066
+  },
+  "block_size": 892,
+  "total_block_size": 2009
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:43.973826",
+  "fields": {
+    "value": 122,
+    "tx_hash": "ba9d5b5c38b687543760add1f422881d17b937e3281d3c046589f81a146919a5",
+    "sent": 1620737623.8507905,
+    "committed": 1620737623.9737935
+  },
+  "block_size": 7809,
+  "total_block_size": 9682
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:45.087509",
+  "fields": {
+    "value": 220,
+    "tx_hash": "be06a855578c2b77a0ddf8717120ae4c713eb881d973fd20841a8b981447a724",
+    "sent": 1620737624.8664632,
+    "committed": 1620737625.0874763
+  },
+  "block_size": 2428,
+  "total_block_size": 3465
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:45.932012",
+  "fields": {
+    "value": 72,
+    "tx_hash": "5496eab86ca189fb1f39ba06afe997faf57e19b403e9811c45a9a6d77a5e380b",
+    "sent": 1620737625.8598297,
+    "committed": 1620737625.9319854
+  },
+  "block_size": 3196,
+  "total_block_size": 4565
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:46.983387",
+  "fields": {
+    "value": 121,
+    "tx_hash": "c62757e2911fb311dd2079c428b6b26f15dffc776bcca2b4581294b08e2093ad",
+    "sent": 1620737626.862271,
+    "committed": 1620737626.9833567
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:47.950888",
+  "fields": {
+    "value": 110,
+    "tx_hash": "d0106606011ac917f6156c48e3a2663da56b612cba4636942b6de42af7aec641",
+    "sent": 1620737627.8404624,
+    "committed": 1620737627.9508567
+  },
+  "block_size": 7810,
+  "total_block_size": 9683
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:49.005162",
+  "fields": {
+    "value": 149,
+    "tx_hash": "f01ee2f1e65835940ecf0d1272b45e2e78518bc303cbe784b6040bf6da16d423",
+    "sent": 1620737628.855516,
+    "committed": 1620737629.0051339
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:49.994498",
+  "fields": {
+    "value": 154,
+    "tx_hash": "ad429e3b639a2e8ddc8094b2f6ccdf0b7a3d13f78b07ce7c3cd54a2114bab32a",
+    "sent": 1620737629.8396778,
+    "committed": 1620737629.9944775
+  },
+  "block_size": 4736,
+  "total_block_size": 6025
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:50.917374",
+  "fields": {
+    "value": 68,
+    "tx_hash": "46886a79428a94dd0075b073c7d6687d33e9f0b19a1503485ecd74a829f6cb55",
+    "sent": 1620737630.848605,
+    "committed": 1620737630.9173377
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:51.948613",
+  "fields": {
+    "value": 109,
+    "tx_hash": "7bf365d437303ec271d008a2d37d7ee8eee266cf41455f4eca28945db0a54d42",
+    "sent": 1620737631.8389537,
+    "committed": 1620737631.9485838
+  },
+  "block_size": 7812,
+  "total_block_size": 9685
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:52.959550",
+  "fields": {
+    "value": 93,
+    "tx_hash": "86bcc581e168fd7e83459fe6da7910d969d2b37959e2a6deef379a103a822d13",
+    "sent": 1620737632.866189,
+    "committed": 1620737632.9595296
+  },
+  "block_size": 4736,
+  "total_block_size": 6025
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:54.069418",
+  "fields": {
+    "value": 230,
+    "tx_hash": "186b49dc16786f0c108d82612f1d69e126f67976e8c99a688a24e9a814e58495",
+    "sent": 1620737633.839175,
+    "committed": 1620737634.0693972
+  },
+  "block_size": 4738,
+  "total_block_size": 6027
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:55.024178",
+  "fields": {
+    "value": 162,
+    "tx_hash": "e44b5d439642416b748dda6be2c16b6ebbcf9cb9930e8a4eb3fa528db385a887",
+    "sent": 1620737634.8612142,
+    "committed": 1620737635.0241451
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:56.073094",
+  "fields": {
+    "value": 233,
+    "tx_hash": "d8952a7adcb97e19af224eb39dec149baa501cba4550e6a2966dd3687ae30750",
+    "sent": 1620737635.8399782,
+    "committed": 1620737636.0730681
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:57.089525",
+  "fields": {
+    "value": 227,
+    "tx_hash": "6943e6bed92adca9a24282e5e9264145e004074fb36f9f911c0397f762fd1f3b",
+    "sent": 1620737636.8623676,
+    "committed": 1620737637.0894797
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:58.296234",
+  "fields": {
+    "value": 422,
+    "tx_hash": "bffceb45e47ad72e45f5e292b1134399f49b98bdce1e131a5145befc315cea88",
+    "sent": 1620737637.8738434,
+    "committed": 1620737638.2962089
+  },
+  "block_size": 7812,
+  "total_block_size": 9437
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:53:58.997182",
+  "fields": {
+    "value": 141,
+    "tx_hash": "4310de16295ffa64084d6d319416e73e9a28d51d1dabe27ea89cc665eb1d6c3c",
+    "sent": 1620737638.856058,
+    "committed": 1620737638.9971466
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:00.052497",
+  "fields": {
+    "value": 190,
+    "tx_hash": "fda05e29356ec960ef0d289af1d936c90758bbf97ac6ef27c61b8a9d2d879fbb",
+    "sent": 1620737639.8621128,
+    "committed": 1620737640.0524545
+  },
+  "block_size": 1662,
+  "total_block_size": 2615
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:01.108736",
+  "fields": {
+    "value": 269,
+    "tx_hash": "b13ba8945585c76bd586f26b4aa9372391e99b86707a4e264caaefa15dc2fdb3",
+    "sent": 1620737640.8393135,
+    "committed": 1620737641.1087012
+  },
+  "block_size": 3969,
+  "total_block_size": 5422
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:02.035037",
+  "fields": {
+    "value": 173,
+    "tx_hash": "0b19743012c85656064c78fce8cb6b7213971148b01262a596c1d877cf04a6a5",
+    "sent": 1620737641.8616364,
+    "committed": 1620737642.0349994
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:02.921294",
+  "fields": {
+    "value": 81,
+    "tx_hash": "e48501272d8feb18e5d9f64107f2c4bd95a4b15ee00903adc925e6e0ee6e5a46",
+    "sent": 1620737642.8397171,
+    "committed": 1620737642.9212744
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:03.944954",
+  "fields": {
+    "value": 69,
+    "tx_hash": "87addfe2cad854a2c37eaf193fafb46a8f784b9f2c9e6b0f59de6f7a11f4fcdc",
+    "sent": 1620737643.8756073,
+    "committed": 1620737643.9449332
+  },
+  "block_size": 1661,
+  "total_block_size": 2862
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:04.994978",
+  "fields": {
+    "value": 155,
+    "tx_hash": "0d595f800c5f1e47f69d616175353d743f6790acd2a08f6957d05fce0c9c6071",
+    "sent": 1620737644.8393447,
+    "committed": 1620737644.9949577
+  },
+  "block_size": 7811,
+  "total_block_size": 9684
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:05.976716",
+  "fields": {
+    "value": 111,
+    "tx_hash": "9e94ae5a73747eb0ba4d0ee5c1ce416a8eca9e41cd6a058f59d4b943c8b0516e",
+    "sent": 1620737645.8649735,
+    "committed": 1620737645.9766772
+  },
+  "block_size": 7810,
+  "total_block_size": 9683
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:07.303324",
+  "fields": {
+    "value": 447,
+    "tx_hash": "2f7307de4ef09ad95cabe053a202841462d73bf49d3a10940a50308199b428ea",
+    "sent": 1620737646.8561735,
+    "committed": 1620737647.303302
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:07.986868",
+  "fields": {
+    "value": 120,
+    "tx_hash": "3c6ece9d33b750fdb27e58c838d5c2ecd2753afdda5e0da6309957c519ea03e7",
+    "sent": 1620737647.8664565,
+    "committed": 1620737647.9868464
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:08.957408",
+  "fields": {
+    "value": 116,
+    "tx_hash": "c8aeda8134db8da288daaaf071f65ad4fd9eaa16af02f15d73bee45aecd15b7b",
+    "sent": 1620737648.8405607,
+    "committed": 1620737648.9573834
+  },
+  "block_size": 7810,
+  "total_block_size": 9435
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:10.045849",
+  "fields": {
+    "value": 176,
+    "tx_hash": "5aa8e213079331ff9625724460e7f1e0463d587239c887170586964f96b3c712",
+    "sent": 1620737649.8693483,
+    "committed": 1620737650.0458274
+  },
+  "block_size": 4737,
+  "total_block_size": 6274
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:11.008907",
+  "fields": {
+    "value": 149,
+    "tx_hash": "07fc757c0e2486e35278acc27c9f5a3c51ee17ee5a79cb52f2df71b12540cf36",
+    "sent": 1620737650.858984,
+    "committed": 1620737651.0088532
+  },
+  "block_size": 7811,
+  "total_block_size": 9684
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:12.027408",
+  "fields": {
+    "value": 158,
+    "tx_hash": "21075ef6d6e453021e2cc6da37f29c9c69bd0ea4deb49b2cc3608e8200c48046",
+    "sent": 1620737651.8685088,
+    "committed": 1620737652.0273669
+  },
+  "block_size": 4734,
+  "total_block_size": 6023
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:12.948881",
+  "fields": {
+    "value": 80,
+    "tx_hash": "a24c24371c7b6bfb541514415a777758b10f9610309f2906a96511836c3436ae",
+    "sent": 1620737652.8680441,
+    "committed": 1620737652.9488528
+  },
+  "block_size": 1661,
+  "total_block_size": 2862
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:13.987328",
+  "fields": {
+    "value": 134,
+    "tx_hash": "6b311cb4a7828827b1f12dbd87dadc843def158a1fd6e75ba4f62739309bb5e0",
+    "sent": 1620737653.8524783,
+    "committed": 1620737653.9872975
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:15.018799",
+  "fields": {
+    "value": 150,
+    "tx_hash": "95b41bba97755b90747c9c37a6e8daaf2dc79f876d1720d7339dd443cc306d91",
+    "sent": 1620737654.8678439,
+    "committed": 1620737655.0187778
+  },
+  "block_size": 3200,
+  "total_block_size": 4321
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:15.925477",
+  "fields": {
+    "value": 85,
+    "tx_hash": "6e4f84b5c780193b5bb8673d61aa40aa88a3421e441e56f8073696a6780dbba7",
+    "sent": 1620737655.839891,
+    "committed": 1620737655.925455
+  },
+  "block_size": 1661,
+  "total_block_size": 2862
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:16.947228",
+  "fields": {
+    "value": 78,
+    "tx_hash": "1c5cd1c579d7b2a31fe423bd6d1e75b57c69043d1da3b0947186849351257bfc",
+    "sent": 1620737656.8689494,
+    "committed": 1620737656.9472022
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:18.024586",
+  "fields": {
+    "value": 176,
+    "tx_hash": "1d7acf447e8d68dad36ceaf8527534261d73cddfdab3c195714a56f0bed8a997",
+    "sent": 1620737657.84816,
+    "committed": 1620737658.024562
+  },
+  "block_size": 3197,
+  "total_block_size": 4318
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:18.992330",
+  "fields": {
+    "value": 126,
+    "tx_hash": "3ee266cab8620ed1f7776ff497975a78b258cb97d69690d457c4e6079fd97486",
+    "sent": 1620737658.8653944,
+    "committed": 1620737658.992293
+  },
+  "block_size": 6274,
+  "total_block_size": 7731
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:20.008232",
+  "fields": {
+    "value": 168,
+    "tx_hash": "78ba0a4a2219467a6b622ac256c6117237dd46eebb64eb6eca801491a5ee7d80",
+    "sent": 1620737659.8394046,
+    "committed": 1620737660.008203
+  },
+  "block_size": 3967,
+  "total_block_size": 5420
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:21.135152",
+  "fields": {
+    "value": 296,
+    "tx_hash": "6b70ea184423f7c779bf94954cb24b5daade888c7e89a143f05641221363eb80",
+    "sent": 1620737660.8388476,
+    "committed": 1620737661.1351142
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:22.005216",
+  "fields": {
+    "value": 164,
+    "tx_hash": "00e69666bf0cb26fd674f8e5d8003132f504c4f8c641468a00e1c267befdedb3",
+    "sent": 1620737661.8402498,
+    "committed": 1620737662.005189
+  },
+  "block_size": 3967,
+  "total_block_size": 5420
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:22.981696",
+  "fields": {
+    "value": 113,
+    "tx_hash": "de2c08a29ad7324aa881a940395982ab3c8205be53784ca1350cef7e1854d15e",
+    "sent": 1620737662.8685617,
+    "committed": 1620737662.981657
+  },
+  "block_size": 1662,
+  "total_block_size": 2615
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:23.929428",
+  "fields": {
+    "value": 58,
+    "tx_hash": "bde968e0769671d3d2446454842e8589d1484b610d3ef8b42effb28bfd455ec8",
+    "sent": 1620737663.8706567,
+    "committed": 1620737663.9294047
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:24.935634",
+  "fields": {
+    "value": 67,
+    "tx_hash": "69d47217cfd8718bbae541ec84787d09af01b7086829afb4171f1173ccf42cc9",
+    "sent": 1620737664.8682752,
+    "committed": 1620737664.9356124
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:25.954892",
+  "fields": {
+    "value": 87,
+    "tx_hash": "9d5f039e98f23a9a6da1a098109e1c0b561a56fb7016669eca5f8c99c526b622",
+    "sent": 1620737665.8675978,
+    "committed": 1620737665.9548638
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:27.051280",
+  "fields": {
+    "value": 189,
+    "tx_hash": "d069e7cfcd837db3b114230ad1c61ead466e8c2e0f3fba50f4f812209c5b5d8c",
+    "sent": 1620737666.861292,
+    "committed": 1620737667.0512402
+  },
+  "block_size": 3198,
+  "total_block_size": 4567
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:28.001684",
+  "fields": {
+    "value": 134,
+    "tx_hash": "93194a8ee9cee6395d73aeaa9d15cec01508386df3974f8640cbcb8c731f9a8e",
+    "sent": 1620737667.8673236,
+    "committed": 1620737668.0016637
+  },
+  "block_size": 5505,
+  "total_block_size": 7126
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:28.944006",
+  "fields": {
+    "value": 83,
+    "tx_hash": "d3314ae3c6c7fd6c56b2e6327704b9393dfb00876234ea0ce4cf52a986efd841",
+    "sent": 1620737668.860572,
+    "committed": 1620737668.9439774
+  },
+  "block_size": 3967,
+  "total_block_size": 5172
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:29.956645",
+  "fields": {
+    "value": 88,
+    "tx_hash": "765e9645c3f002371617489a9aee2584f8b345b66296dcc91716a12dad5425b0",
+    "sent": 1620737669.8677123,
+    "committed": 1620737669.9566157
+  },
+  "block_size": 2429,
+  "total_block_size": 3466
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:30.969737",
+  "fields": {
+    "value": 117,
+    "tx_hash": "d4a5d2cec3019ee8fd109b3edffff5945cce2987864148f155ca4d1dfabacbf6",
+    "sent": 1620737670.8523817,
+    "committed": 1620737670.969701
+  },
+  "block_size": 6273,
+  "total_block_size": 7978
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:32.039127",
+  "fields": {
+    "value": 171,
+    "tx_hash": "5dc15ad1554e6f1740fcbc261effde0a3bfa7114d192ddb2e149645bf3ecfc1e",
+    "sent": 1620737671.8677533,
+    "committed": 1620737672.0391061
+  },
+  "block_size": 3968,
+  "total_block_size": 5421
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:32.980780",
+  "fields": {
+    "value": 140,
+    "tx_hash": "95dd197b8a0e479b707f927f26ecbc9757a260e5196ab25ea48b01f3ea553134",
+    "sent": 1620737672.8399198,
+    "committed": 1620737672.9807584
+  },
+  "block_size": 4736,
+  "total_block_size": 6273
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:33.946580",
+  "fields": {
+    "value": 79,
+    "tx_hash": "4d25d3df176e603056d7e80a5149eeba88b2038f8d2cbeb4b407a42cf7f6ede8",
+    "sent": 1620737673.8671649,
+    "committed": 1620737673.9465592
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:34.952199",
+  "fields": {
+    "value": 106,
+    "tx_hash": "5fedcd6f6ae2eb5e25b7c15dfbc00a7572476f85c9ec4ea204d97f9ddf3c3541",
+    "sent": 1620737674.845613,
+    "committed": 1620737674.9521754
+  },
+  "block_size": 7811,
+  "total_block_size": 9436
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:35.986978",
+  "fields": {
+    "value": 119,
+    "tx_hash": "10bdb307bb4d8f8edd1de9c97f418cdfe74d5c14f68b5ff1278e9846005e14e5",
+    "sent": 1620737675.8669353,
+    "committed": 1620737675.9869502
+  },
+  "block_size": 7809,
+  "total_block_size": 9682
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:36.914703",
+  "fields": {
+    "value": 74,
+    "tx_hash": "b048253a28dd5577fd6a3785f9419ab97719afbaf7834ea3fdd1cb50e04512ef",
+    "sent": 1620737676.8406298,
+    "committed": 1620737676.91468
+  },
+  "block_size": 3968,
+  "total_block_size": 5421
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:37.969055",
+  "fields": {
+    "value": 106,
+    "tx_hash": "7dccb6c6c9e811fde1354ec89c2be724e098a4be2c283b3487f820758a9889dd",
+    "sent": 1620737677.862818,
+    "committed": 1620737677.9690237
+  },
+  "block_size": 3199,
+  "total_block_size": 4568
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:38.955415",
+  "fields": {
+    "value": 112,
+    "tx_hash": "064a1ffbd202cc5772af86ea71e0d3defcc42364768bea953c95c6b81b08b81e",
+    "sent": 1620737678.8429782,
+    "committed": 1620737678.9553752
+  },
+  "block_size": 7810,
+  "total_block_size": 9435
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:39.976874",
+  "fields": {
+    "value": 108,
+    "tx_hash": "d7d0a2d065027380efbcdef3cd9e44b8826bbff18898ea017377dcde8cae0b62",
+    "sent": 1620737679.8688068,
+    "committed": 1620737679.976842
+  },
+  "block_size": 7810,
+  "total_block_size": 9435
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:40.914464",
+  "fields": {
+    "value": 57,
+    "tx_hash": "6a7b06663ce7d1bc6e36563bad50d2e590463a5f4a8e8f743565b5d26d849623",
+    "sent": 1620737680.8573837,
+    "committed": 1620737680.9144394
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:42.122819",
+  "fields": {
+    "value": 255,
+    "tx_hash": "f2e290acbdcc680d637b8dc379bacaab3cbcbc04ed1fe45c146a0a84456a161a",
+    "sent": 1620737681.8676424,
+    "committed": 1620737682.1227815
+  },
+  "block_size": 1661,
+  "total_block_size": 2614
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:43.003345",
+  "fields": {
+    "value": 140,
+    "tx_hash": "ff860e623ad56ea764fd08ba2762a713cc56b6004cb51826dc075a2edfbfc340",
+    "sent": 1620737682.863111,
+    "committed": 1620737683.0033128
+  },
+  "block_size": 7809,
+  "total_block_size": 9682
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:43.968401",
+  "fields": {
+    "value": 128,
+    "tx_hash": "f93727714a3ccea075d789da468c45b5244c98815bd98d22691045433d293a25",
+    "sent": 1620737683.8403382,
+    "committed": 1620737683.9683623
+  },
+  "block_size": 3967,
+  "total_block_size": 5420
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:45.030467",
+  "fields": {
+    "value": 160,
+    "tx_hash": "cee4dc3dab20262211df7ab9dd7a40435f7fd2683cec2c637fad002ed0da3eb3",
+    "sent": 1620737684.8693993,
+    "committed": 1620737685.0303986
+  },
+  "block_size": 2431,
+  "total_block_size": 3716
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:46.029492",
+  "fields": {
+    "value": 189,
+    "tx_hash": "05f9bc4278055684f429568d79e3d5b84785ef1dfb91d5a05a25da302e58ae4b",
+    "sent": 1620737685.8394663,
+    "committed": 1620737686.0294714
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:46.944408",
+  "fields": {
+    "value": 80,
+    "tx_hash": "52dffbe35da4c2c4199a314a9d8e74334e02079a45c0b3837e6b8e025d2c1ac4",
+    "sent": 1620737686.8638012,
+    "committed": 1620737686.944378
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:47.992993",
+  "fields": {
+    "value": 153,
+    "tx_hash": "c5f85c2d5b9446964426e58b74352b88013c38317a2345c1d3322d12baf2e6a8",
+    "sent": 1620737687.839732,
+    "committed": 1620737687.9929724
+  },
+  "block_size": 3199,
+  "total_block_size": 4568
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:48.986411",
+  "fields": {
+    "value": 117,
+    "tx_hash": "1a8532b3c5a785a7c6f35d9397f11ad47d1d2409e281b2564b2725db8714bf07",
+    "sent": 1620737688.868728,
+    "committed": 1620737688.986381
+  },
+  "block_size": 7040,
+  "total_block_size": 8581
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:49.904712",
+  "fields": {
+    "value": 65,
+    "tx_hash": "946edfd66769fc3f79cd90f3689591096a25c999bff14fee8b0b73cead7dd215",
+    "sent": 1620737689.8395896,
+    "committed": 1620737689.9046872
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:50.939101",
+  "fields": {
+    "value": 100,
+    "tx_hash": "e5062ad0d6e9cdfaec123ad1a5ccc838f20fbd523909c4db393c34bab116d05b",
+    "sent": 1620737690.838969,
+    "committed": 1620737690.9390802
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:51.946449",
+  "fields": {
+    "value": 104,
+    "tx_hash": "c222e323b2318f3dd89fe7fb45829014be5539a2b6d96bf2bf96e7c1c8254456",
+    "sent": 1620737691.8421125,
+    "committed": 1620737691.9464252
+  },
+  "block_size": 7812,
+  "total_block_size": 9437
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:53.054882",
+  "fields": {
+    "value": 186,
+    "tx_hash": "2700b51d7ca4f8d813acc2a1f084cfb587a432fe9c7343966878523c93ca1b70",
+    "sent": 1620737692.8679082,
+    "committed": 1620737693.0548606
+  },
+  "block_size": 3969,
+  "total_block_size": 5422
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:53.979217",
+  "fields": {
+    "value": 113,
+    "tx_hash": "039ed3d01f6a4a5e0d91182866b78d8172cd0f43d80ea5273134afee339b3f96",
+    "sent": 1620737693.8661187,
+    "committed": 1620737693.979188
+  },
+  "block_size": 4734,
+  "total_block_size": 6023
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:55.160798",
+  "fields": {
+    "value": 290,
+    "tx_hash": "46fdd5b8da00ad28183e16d588ecc64c4e3cc9f628304777bb88d30a5c3c3830",
+    "sent": 1620737694.8697965,
+    "committed": 1620737695.1607525
+  },
+  "block_size": 7809,
+  "total_block_size": 9682
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:56.002739",
+  "fields": {
+    "value": 161,
+    "tx_hash": "c7388048c0279bd51894a280a6fcbec57375dc288fc2ddc5b1652a4cffa91db1",
+    "sent": 1620737695.8407578,
+    "committed": 1620737696.0026844
+  },
+  "block_size": 2431,
+  "total_block_size": 3716
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:56.992809",
+  "fields": {
+    "value": 152,
+    "tx_hash": "20d10149f52d68511bce7aef302ed3974d21424e81f937b08d81a1594efb964f",
+    "sent": 1620737696.839891,
+    "committed": 1620737696.9927619
+  },
+  "block_size": 7811,
+  "total_block_size": 9684
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:58.004555",
+  "fields": {
+    "value": 135,
+    "tx_hash": "1d1fa48864d3db8b22f953e37e79169c40b06385d7f1c27c2dd6e6b3ee7ec877",
+    "sent": 1620737697.868667,
+    "committed": 1620737698.004509
+  },
+  "block_size": 7811,
+  "total_block_size": 9684
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:54:59.017032",
+  "fields": {
+    "value": 176,
+    "tx_hash": "140e07e77490e988dec059cae3445c55993c9f0458f9f5dba2bd7da73990814e",
+    "sent": 1620737698.8407056,
+    "committed": 1620737699.0170019
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:00.599630",
+  "fields": {
+    "value": 731,
+    "tx_hash": "490d9fd0b42a84d7d314bc3e99dc4ce8e7695773a220bef6bb8616f86f84bbc3",
+    "sent": 1620737699.8678977,
+    "committed": 1620737700.5996087
+  },
+  "block_size": 3200,
+  "total_block_size": 4569
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:01.111446",
+  "fields": {
+    "value": 270,
+    "tx_hash": "e0579bddcf9d22986f37f0e4eaec14d521a462eca42890c5e3c5110c0eae9ec0",
+    "sent": 1620737700.8408926,
+    "committed": 1620737701.1114092
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:02.057342",
+  "fields": {
+    "value": 188,
+    "tx_hash": "bd1079b4ae6509da5dc5c626877376318d8e865b333f126297573cff13895781",
+    "sent": 1620737701.8687084,
+    "committed": 1620737702.0573027
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:02.927421",
+  "fields": {
+    "value": 87,
+    "tx_hash": "72ced410c944b3dd2131fe5c8a71c065b472bf2f4121adaa2104665bacbe3973",
+    "sent": 1620737702.8399503,
+    "committed": 1620737702.9273994
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:03.974839",
+  "fields": {
+    "value": 113,
+    "tx_hash": "98746319ee900f398e700ef11946a33b7efa57c632e1e95040e5e8973eb5e0c1",
+    "sent": 1620737703.861404,
+    "committed": 1620737703.9748037
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:04.949094",
+  "fields": {
+    "value": 107,
+    "tx_hash": "d540901c9d13f9afd930f07fc8d007635e4432675f8d115289e228ff19cd388a",
+    "sent": 1620737704.8417559,
+    "committed": 1620737704.949073
+  },
+  "block_size": 6275,
+  "total_block_size": 7980
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:05.980800",
+  "fields": {
+    "value": 111,
+    "tx_hash": "37601737080f109156c3022e6d13e9792130db432a287b535a49e44fe7c428ae",
+    "sent": 1620737705.8688567,
+    "committed": 1620737705.980779
+  },
+  "block_size": 3199,
+  "total_block_size": 4568
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:06.945738",
+  "fields": {
+    "value": 85,
+    "tx_hash": "30ed5551df53e207e31709421481201dacd6f9f838c09b469d4302e3a3d2e2e0",
+    "sent": 1620737706.86039,
+    "committed": 1620737706.9457026
+  },
+  "block_size": 3968,
+  "total_block_size": 5173
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:07.929800",
+  "fields": {
+    "value": 62,
+    "tx_hash": "75c115e47024cf47de7eb6e88d0303b9c181e70eaa8009ebdabbb58cc31c57c3",
+    "sent": 1620737707.86762,
+    "committed": 1620737707.92978
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:08.961155",
+  "fields": {
+    "value": 91,
+    "tx_hash": "ffcf845dfe6f006ed2b9d8be87ec58cf43946617f3192b3b378c59237c4076e8",
+    "sent": 1620737708.8695655,
+    "committed": 1620737708.9611335
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:09.977737",
+  "fields": {
+    "value": 115,
+    "tx_hash": "eea0f5adfc1e7c0cddd84a0939ecff08b0bb3dbac9a34783aea0da41ba363576",
+    "sent": 1620737709.8618004,
+    "committed": 1620737709.977702
+  },
+  "block_size": 6275,
+  "total_block_size": 7732
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:10.923386",
+  "fields": {
+    "value": 82,
+    "tx_hash": "3a9e58678b6a74d21d808d5072650ed9e401534a2dc675b0995147ffa9fb2793",
+    "sent": 1620737710.8403845,
+    "committed": 1620737710.9233544
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:11.966340",
+  "fields": {
+    "value": 125,
+    "tx_hash": "674bd0d22254bbc167c1f1e4a46b7f25c6745ee0d39943833449a434a5e64c9e",
+    "sent": 1620737711.8403006,
+    "committed": 1620737711.966307
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:12.964571",
+  "fields": {
+    "value": 96,
+    "tx_hash": "c12edd721ae98ff9b3ae1fb9aa5b5c654716ddb1c4447c6d80630200a9f9949b",
+    "sent": 1620737712.8680456,
+    "committed": 1620737712.9645503
+  },
+  "block_size": 1662,
+  "total_block_size": 2863
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:13.981274",
+  "fields": {
+    "value": 141,
+    "tx_hash": "a3f9d48955370979dd96f433337220b9223ca3d2af8397f6c9f8be8427e20d86",
+    "sent": 1620737713.8401234,
+    "committed": 1620737713.9812539
+  },
+  "block_size": 2430,
+  "total_block_size": 3715
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:15.003525",
+  "fields": {
+    "value": 137,
+    "tx_hash": "39b4efb43fdf44b7ebecf377f0a154866b1d227f36ccc5b734d9341049df7d25",
+    "sent": 1620737714.8658485,
+    "committed": 1620737715.0034842
+  },
+  "block_size": 5505,
+  "total_block_size": 6878
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:15.910237",
+  "fields": {
+    "value": 70,
+    "tx_hash": "ef09eea502718e89e4d1707462d380db77806b24ebff9686bb7e0be802ce67f8",
+    "sent": 1620737715.8401155,
+    "committed": 1620737715.9102063
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:16.969943",
+  "fields": {
+    "value": 100,
+    "tx_hash": "789818ee4bcd708c934bf5f7ac198a91979c81a388c61a81edead4c0ca904e7b",
+    "sent": 1620737716.8696208,
+    "committed": 1620737716.9699225
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:17.964992",
+  "fields": {
+    "value": 123,
+    "tx_hash": "c87d7afac846c0c0c4407d54f817152b60050fd0b30fe7ad08b1fe745f1aa07f",
+    "sent": 1620737717.8409793,
+    "committed": 1620737717.964971
+  },
+  "block_size": 7808,
+  "total_block_size": 9433
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:18.998616",
+  "fields": {
+    "value": 137,
+    "tx_hash": "7ce4221ba8a47a8074201e75e4b174e800860caeffb8b6319ea7d9045fb5afab",
+    "sent": 1620737718.8612795,
+    "committed": 1620737718.9985712
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:19.915766",
+  "fields": {
+    "value": 72,
+    "tx_hash": "076639315b37c7498f74b4659e52daf9a4f54ddf7bbb157382870ead1f1fdaed",
+    "sent": 1620737719.84277,
+    "committed": 1620737719.9157443
+  },
+  "block_size": 893,
+  "total_block_size": 1762
+}
+{
+  "measurement": "request_success_duration",
+  "tags": {
+    "request_type": "grpc",
+    "name": "send_tx_wait"
+  },
+  "time": "2021-05-11T12:55:20.938268",
+  "fields": {
+    "value": 97,
+    "tx_hash": "e79e1a03eff05636e606015e265b5fafe1da5593884b01dc48640d7df37a5f90",
+    "sent": 1620737720.8405888,
+    "committed": 1620737720.9382477
+  },
+  "block_size": 893,
+  "total_block_size": 2010
+}
